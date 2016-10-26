@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- ng-app is Angular's way of injecting code into a template.  -->
 <html ng-app="myApp">
 
 <head>
@@ -11,6 +12,7 @@
 
 <body>
 
+<!-- Using Bootstrap, the main container is defined with preset styles, as well as my AppCtrl will inject data. -->
 <div class="container" ng-controller="AppCtrl">
     <h1>Contact List App</h1>
     
@@ -22,6 +24,14 @@
     			<th>Number</th>
     		</tr>
     	</thead>
+    	<tbody>
+    		<!-- Same as before, we are injecting data but here using a cool Angular method to repeat our information. -->
+    		<tr ng-repeat="contact in contactList">
+    			<td>{{contact.name}}</td>
+    			<td>{{contact.email}}</td>
+    			<td>{{contact.number}}</td>
+    		</tr>
+    	</tbody>
     </table>
 
 </div>
