@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app>
+<html ng-app="myApp">
 
 <head>
  	<!-- Latest compiled and minified CSS -->
@@ -11,7 +11,7 @@
 
 <body>
 
-<div class="container">
+<div class="container" ng-controller="AppCtrl">
     <h1>Contact List App</h1>
     
     <table class="table">
@@ -28,6 +28,7 @@
 
     <!-- CDN Dependencies -->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script type="text/javascript" src="controllers/controller.js"></script>
    
 </body>
 
