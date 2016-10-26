@@ -22,9 +22,17 @@
     			<th>Name</th>
     			<th>Email</th>
     			<th>Number</th>
+    			<th>Action</th>
     		</tr>
     	</thead>
     	<tbody>
+    		<tr>
+    			<!-- ng-model here is selecting the input data's destination. -->
+    			<td><input class="form-control" ng-model="contact.name"></input></td>
+    			<td><input class="form-control" ng-model="contact.email"></input></td>
+    			<td><input class="form-control" ng-model="contact.number"></input></td>
+    			<td><button class="btn btn-primary" ng-click="addContact()">Add Contact</button></td>	
+    		</tr>
     		<!-- Same as before, we are injecting data but here using a cool Angular method to repeat our information. -->
     		<tr ng-repeat="contact in contactList">
     			<td>{{contact.name}}</td>
@@ -32,6 +40,7 @@
     			<td>{{contact.number}}</td>
     		</tr>
     	</tbody>
+
     </table>
 
 </div>
